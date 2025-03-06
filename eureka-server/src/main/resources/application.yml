@@ -1,0 +1,11 @@
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false #不注册自己
+    fetchRegistry: false #该服务不获取服务注册信息
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  server:
+    enableSelfPreservation: false #关闭自我保护机制
+    evictionIntervalTimerInMs: 4000 #服务剔除间隔
